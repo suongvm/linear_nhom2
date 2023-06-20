@@ -58,7 +58,7 @@ elif choice == 'Xây dựng mô hình':
     
     st.write("##### 2. Trực quan hóa dữ liệu")
     u=st.text_input('Nhập biến muốn vẽ vào đây')
-    fig1 = sns.regplot(data=df, x=u, y='giatri')    
+    fig1 = sns.regplot(data=df, x=u, y='TN')    
     st.pyplot(fig1.figure)
 
     st.write("##### 3. Build model...")
@@ -105,6 +105,6 @@ elif choice == 'Sử dụng mô hình để dự báo':
         st.write("Content:")
         if len(lines)>0:
             st.code(lines)
-            X_1 = lines.drop(columns=['giatri'])   
+            X_1 = lines.drop(columns=['TN'])   
             y_pred_new = model.predict(X_1)       
             st.code("giá trị dự báo: " + str(y_pred_new))
