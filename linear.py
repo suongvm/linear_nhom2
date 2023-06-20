@@ -20,7 +20,7 @@ if uploaded_file is not None:
 X = df.drop(columns=['TN'])
 y = df['TN']
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state= 12)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state= 10)
 
 model = LinearRegression()
 
